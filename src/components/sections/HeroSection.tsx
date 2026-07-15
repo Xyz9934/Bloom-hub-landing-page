@@ -1,5 +1,6 @@
 import FlowerButton from '../ui/FlowerButton'
 import { motion } from 'framer-motion'
+import { siteContent } from '../../config/siteContent'
 
 type HeroSectionProps = {
   onOrderNowClick: () => void
@@ -22,13 +23,13 @@ export default function HeroSection({ onOrderNowClick }: HeroSectionProps) {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <p className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-rose-50 backdrop-blur">
-            Luxury floral artistry
+            {siteContent.tagline}
           </p>
           <h1 className="max-w-2xl text-balance text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-            Blooms crafted with elegance for every beautiful moment
+            {siteContent.heroHeading}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-8 text-stone-100/90 sm:text-lg">
-            Discover thoughtfully arranged bouquets designed to feel timeless, refined, and deeply personal.
+            {siteContent.heroSubtitle}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <FlowerButton className="min-w-40" onClick={onOrderNowClick}>

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { siteContent } from '../../config/siteContent'
 import FlowerIcon from '../ui/FlowerIcon'
 
 const links = [
@@ -26,7 +27,7 @@ export default function Navbar({ onOrderNowClick }: NavbarProps) {
           <span className="flex h-11 w-11 items-center justify-center rounded-full bg-rose-100 text-rose-500 shadow-sm">
             <FlowerIcon className="h-6 w-6" />
           </span>
-          <span className="text-lg font-semibold tracking-[0.2em] text-stone-900">Shifa Blooms</span>
+          <span className="text-lg font-semibold tracking-[0.2em] text-stone-900">{siteContent.businessName}</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

@@ -1,16 +1,23 @@
-import { useState } from 'react'
-import Navbar from '../../components/layout/Navbar'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import Footer from '../../components/layout/Footer'
-import HeroSection from '../../components/sections/HeroSection'
-import BouquetsSection from '../../components/sections/BouquetsSection'
+import Navbar from '../../components/layout/Navbar'
 import AboutSection from '../../components/sections/AboutSection'
-import WhyChooseUsSection from '../../components/sections/WhyChooseUsSection'
-import GallerySection from '../../components/sections/GallerySection'
+import BouquetsSection from '../../components/sections/BouquetsSection'
 import ContactSection from '../../components/sections/ContactSection'
-import EnquiryModal from '../../components/enquiry/EnquiryModal'
+import GallerySection from '../../components/sections/GallerySection'
+import HeroSection from '../../components/sections/HeroSection'
+import WhyChooseUsSection from '../../components/sections/WhyChooseUsSection'
+import FullscreenLoader from '../../components/ui/FullscreenLoader'
+import { useSeo } from '../../hooks/useSeo'
+
+const EnquiryModal = lazy(() => import('../../components/enquiry/EnquiryModal'))
 
 export default function LandingPage() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
+  useSeo()
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth'
+  }, [])
 
   return (
     <main className="bg-white text-stone-900">
@@ -28,7 +35,9 @@ export default function LandingPage() {
       <GallerySection />
       <ContactSection />
       <Footer />
-      <EnquiryModal open={isEnquiryOpen} onClose={() => setIsEnquiryOpen(false)} />
+      <Suspense fallback={<FullscreenLoader />}>
+        <EnquiryModal open={isEnquiryOpen} onClose={() => setIsEnquiryOpen(false)} />
+      </Suspense>
     </main>
   )
 }

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useMemo, useState, type FormEvent, type ReactNode } from 'react'
+import { bouquets } from '../../data/bouquets'
 import { submitEnquiry } from '../../services/api/enquiryApi'
 
 type EnquiryModalProps = {
@@ -18,7 +19,7 @@ type FormErrors = Partial<Record<keyof FormState, string>> & {
   message?: string
 }
 
-const bouquetOptions = ['Blush Serenade', 'Lavender Whisper', 'Garden Grace', 'Custom Bouquet']
+const bouquetOptions = bouquets.map((bouquet) => bouquet.name)
 
 const initialState: FormState = {
   fullName: '',
