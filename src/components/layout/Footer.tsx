@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { siteContent } from '../../config/siteContent'
 
 function SocialIcon({ label }: { label: string }) {
@@ -11,13 +10,7 @@ function SocialIcon({ label }: { label: string }) {
 
 export default function Footer() {
   return (
-    <motion.footer
-      className="border-t border-stone-200 bg-white"
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      viewport={{ once: true, amount: 0.15 }}
-    >
+    <footer className="border-t border-stone-200 bg-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <p className="text-sm text-stone-500">
           {siteContent.copyright} {new Date().getFullYear()} {siteContent.businessName}. {siteContent.footerText}
@@ -42,6 +35,6 @@ export default function Footer() {
             ))}
         </div>
       </div>
-    </motion.footer>
+    </footer>
   )
 }

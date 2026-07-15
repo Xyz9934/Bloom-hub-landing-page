@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { siteContent } from '../config/siteContent'
 
@@ -7,6 +8,10 @@ type NotFoundPageProps = {
 
 export default function NotFoundPage({ statusCode = 404 }: NotFoundPageProps) {
   const isServerError = statusCode === 500
+
+  useEffect(() => {
+    document.title = `${statusCode} | Shifa Blooms`
+  }, [statusCode])
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-stone-50 px-6 py-16 text-center">

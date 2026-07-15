@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion'
-import { useEffect, useMemo, useState, type FormEvent, type ReactNode } from 'react'
+import { useEffect, useState, type FormEvent, type ReactNode } from 'react'
 import { bouquets } from '../../data/bouquets'
 import { submitEnquiry } from '../../services/api/enquiryApi'
 
@@ -37,10 +36,7 @@ export default function EnquiryModal({ open, onClose }: EnquiryModalProps) {
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [successMessage, setSuccessMessage] = useState('')
-  const instagramUrl = useMemo(
-    () => import.meta.env.VITE_INSTAGRAM_URL ?? 'https://instagram.com/shifa.blooms',
-    [],
-  )
+  const instagramUrl = import.meta.env.VITE_INSTAGRAM_URL ?? 'https://instagram.com/shifa.blooms'
 
   useEffect(() => {
     if (!open) {
@@ -134,13 +130,7 @@ export default function EnquiryModal({ open, onClose }: EnquiryModalProps) {
         disabled={isSubmitting || Boolean(successMessage)}
       />
 
-      <motion.div
-        className="relative z-[71] w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/70 bg-white shadow-[0_30px_120px_-35px_rgba(15,23,42,0.45)]"
-        initial={{ opacity: 0, scale: 0.96, y: 18 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.96, y: 18 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-      >
+      <div className="relative z-[71] w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/70 bg-white shadow-[0_30px_120px_-35px_rgba(15,23,42,0.45)] animate-fade-up">
         <div className="bg-gradient-to-r from-rose-100 via-stone-50 to-emerald-50 px-6 py-5 sm:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-rose-500">Order Now</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Send your bouquet enquiry</h2>
@@ -237,7 +227,7 @@ export default function EnquiryModal({ open, onClose }: EnquiryModalProps) {
             </div>
           </form>
         )}
-      </motion.div>
+      </div>
     </div>
   )
 }

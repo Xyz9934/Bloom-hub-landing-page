@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 var __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
+    base: '/Bloom-hub-landing-page/',
     plugins: [react()],
     build: {
         cssCodeSplit: true,

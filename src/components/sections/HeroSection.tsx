@@ -1,5 +1,4 @@
 import FlowerButton from '../ui/FlowerButton'
-import { motion } from 'framer-motion'
 import { siteContent } from '../../config/siteContent'
 
 type HeroSectionProps = {
@@ -10,18 +9,13 @@ export default function HeroSection({ onOrderNowClick }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[92vh] overflow-hidden bg-[url('https://images.unsplash.com/photo-1519377957797-8d23f8b9c4d6?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center"
+      className="relative isolate min-h-[92vh] overflow-hidden bg-[url('/hero-bloom.svg')] bg-cover bg-center"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-stone-950/70 via-stone-900/40 to-rose-950/25" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.35),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(255,228,236,0.35),_transparent_28%)]" />
 
       <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
-        <motion.div
-          className="max-w-3xl text-white"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
+        <div className="max-w-3xl text-white animate-fade-up">
           <p className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-rose-50 backdrop-blur">
             {siteContent.tagline}
           </p>
@@ -42,7 +36,7 @@ export default function HeroSection({ onOrderNowClick }: HeroSectionProps) {
               Explore Bouquets
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <a

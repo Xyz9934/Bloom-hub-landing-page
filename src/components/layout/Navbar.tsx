@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { siteContent } from '../../config/siteContent'
 import FlowerIcon from '../ui/FlowerIcon'
 
@@ -16,12 +15,7 @@ type NavbarProps = {
 
 export default function Navbar({ onOrderNowClick }: NavbarProps) {
   return (
-    <motion.header
-      className="sticky top-0 z-50 border-b border-white/40 bg-white/80 backdrop-blur-xl"
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-    >
+    <header className="sticky top-0 z-50 border-b border-white/40 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center rounded-full bg-rose-100 text-rose-500 shadow-sm">
@@ -58,6 +52,6 @@ export default function Navbar({ onOrderNowClick }: NavbarProps) {
           Order Now
         </button>
       </div>
-    </motion.header>
+    </header>
   )
 }
