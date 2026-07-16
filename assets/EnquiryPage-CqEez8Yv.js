@@ -1,0 +1,1 @@
+import{r,j as e}from"./react-vendor-DNKlPtdq.js";function o(){return r.useEffect(()=>{document.title="Enquiry Module | Shifa Blooms"},[]),e.jsxs("main",{className:"bg-stone-50 px-6 py-20 text-center",children:[e.jsx("h1",{children:"Enquiry Module"}),e.jsx("p",{children:"Placeholder route for future enquiry workflow."})]})}export{o as default};
