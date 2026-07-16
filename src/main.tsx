@@ -4,6 +4,13 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './styles/tailwind.css'
 
+const redirectPath = sessionStorage.getItem('spa-redirect')
+
+if (redirectPath) {
+  sessionStorage.removeItem('spa-redirect')
+  window.history.replaceState(null, '', redirectPath)
+}
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
