@@ -23,13 +23,26 @@ export default function BouquetsSection() {
                   <div className="aspect-[4/3] overflow-hidden">
                     <OptimizedImage
                       src={bouquet.image}
-                      alt={bouquet.name}
+                      alt={`${bouquet.name} product photo`}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="space-y-3 p-6">
                     <h3 className="text-xl font-semibold text-stone-900">{bouquet.name}</h3>
                     <p className="text-sm leading-7 text-stone-600">{bouquet.shortDescription}</p>
+                    {bouquet.description ? <p className="text-sm leading-7 text-stone-500">{bouquet.description}</p> : null}
+                    {bouquet.features?.length ? (
+                      <ul className="flex flex-wrap gap-2 pt-1">
+                        {bouquet.features.map((feature) => (
+                          <li
+                            key={feature}
+                            className="rounded-full bg-stone-100 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-stone-600"
+                          >
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-rose-500">{bouquet.price}</p>
                   </div>
                 </article>

@@ -26,8 +26,7 @@ export default function AboutSection() {
                 </h3>
                 <p className="max-w-xl text-base leading-8 text-stone-600">
                   We focus on refined color palettes, premium flower selection, and polished presentation to make
-                  every order feel special. This section is intentionally placeholder content for the first launch
-                  milestone.
+                  every order feel special. Each piece is arranged to feel thoughtful, gift-ready, and memorable.
                 </p>
               </div>
             </div>

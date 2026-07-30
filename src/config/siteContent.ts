@@ -47,8 +47,8 @@ export const siteContent: SiteContent = {
   email: 'hello@shifablooms.com',
   instagramUrl: 'https://instagram.com/shifa.blooms',
   whatsappUrl: 'https://wa.me/919470439517',
-  address: 'Your studio address placeholder, City, Country',
-  googleMapsUrl: 'https://www.google.com/maps?q=Your+studio+address+placeholder',
+  address: 'Shifa Blooms studio, India',
+  googleMapsUrl: 'https://www.google.com/maps?q=Shifa+Blooms+studio',
   copyright: '©',
   socialMediaLinks: [
     { label: 'Instagram', url: 'https://instagram.com/shifa.blooms' },
@@ -69,18 +69,16 @@ export const siteContent: SiteContent = {
   whyChooseUsText:
     'Premium details matter. These four pillars shape how we plan future bouquets, service, and customer care.',
   galleryEyebrow: 'Gallery',
-  galleryTitle: 'A glimpse of the floral mood we want to create',
-  galleryDescription:
-    'Temporary placeholder imagery arranged in a responsive mosaic to establish the visual rhythm of the site.',
+  galleryTitle: 'A glimpse of the floral mood we create with our handmade pieces',
+  galleryDescription: 'A responsive mosaic of real product photos showcasing the finished pieces in natural settings.',
   contactEyebrow: 'Contact',
   contactTitle: 'Reach out for bouquets, gifting, and custom floral requests',
-  contactDescription:
-    'This is a simple contact display section for now. We’ll wire real enquiry flows in a later milestone.',
+  contactDescription: 'Reach out for bouquets, gifting, and custom floral requests.',
   footerText: 'All rights reserved.',
   seo: {
     title: 'Shifa Blooms | Premium Floral Designs',
     description:
-      'Shifa Blooms is a premium flower shop landing page for elegant bouquets, handcrafted arrangements, and thoughtful gifting.',
+      'Shifa Blooms features handcrafted floral bouquets, pot arrangements, and thoughtful gifting pieces made for beautiful moments.',
     keywords: 'flower shop, premium bouquets, luxury flowers, flower delivery, floral arrangements, Shifa Blooms',
     canonicalUrl: 'https://shifablooms.com/',
   },
