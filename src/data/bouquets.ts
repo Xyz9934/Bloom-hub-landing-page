@@ -13,11 +13,11 @@ const assetPath = (fileName: string) => `${import.meta.env.BASE_URL}assets/produ
 
 const commonFeatures = [
   'Material: Premium Pipe Cleaners, Floral Wrapping Paper & Satin Ribbon',
-  "Care: Keep away from water and direct sunlight.",
+  'Care: Keep away from water and direct sunlight.',
   "Care: Handle gently to maintain the bouquet's shape.",
   'Care: A long-lasting handmade keepsake for years to come.',
   'Customization: Yes (Color, flowers, wrapping, and message card can be customized on request.)',
-  'Processing Time: 5–7 Business Days',
+  'Processing Time: 5-7 Business Days',
 ]
 
 export const bouquets: Bouquet[] = [
@@ -26,7 +26,7 @@ export const bouquets: Bouquet[] = [
     name: 'Blush Tulip Pot (Pink & White)',
     shortDescription: 'A little pot of happiness, handcrafted with love.',
     description:
-      'Our Blush Tulip Pot features soft pink and white handcrafted tulips arranged in an adorable smiling crochet-style pot. A timeless décor piece that\'s perfect for birthdays, room décor, study tables, work desks, or gifting someone special. Carefully handcrafted using premium-quality pipe cleaners for a neat and elegant finish.',
+      "Our Blush Tulip Pot features soft pink and white handcrafted tulips arranged in an adorable smiling crochet-style pot. A timeless decor piece that's perfect for birthdays, room decor, study tables, work desks, or gifting someone special. Carefully handcrafted using premium-quality pipe cleaners for a neat and elegant finish.",
     features: commonFeatures,
     price: '₹249',
     image: assetPath('blush-tulip-pot-pink-white.jpeg'),
@@ -46,8 +46,7 @@ export const bouquets: Bouquet[] = [
   {
     id: 'sunflower-bloom-bouquet',
     name: 'Sunflower Bloom Bouquet',
-    shortDescription:
-      'Bring sunshine into every celebration with our handcrafted Sunflower Bloom Bouquet.',
+    shortDescription: 'Bring sunshine into every celebration with our handcrafted Sunflower Bloom Bouquet.',
     description:
       'A beautiful handmade pipe cleaner bouquet featuring a vibrant sunflower, soft pink tulips, and delicate white flowers. Thoughtfully handcrafted to create a timeless gift for birthdays, anniversaries, graduations, and special moments. Every bouquet is made with premium-quality materials and wrapped in elegant premium paper.',
     features: commonFeatures,
@@ -93,7 +92,7 @@ export const bouquets: Bouquet[] = [
     name: 'Pink Blossom Pot',
     shortDescription: 'Delicate pink blooms that stay beautiful forever.',
     description:
-      'This handcrafted Pink Blossom Pot features elegant pastel pink flowers arranged in a decorative planter with a cute ribbon detail. A perfect gift for birthdays, anniversaries, or anyone who loves floral décor. Carefully handcrafted with premium-quality pipe cleaners for a beautiful and lasting finish.',
+      'This handcrafted Pink Blossom Pot features elegant pastel pink flowers arranged in a decorative planter with a cute ribbon detail. A perfect gift for birthdays, anniversaries, or anyone who loves floral decor. Carefully handcrafted with premium-quality pipe cleaners for a beautiful and lasting finish.',
     price: '₹199',
     image: assetPath('pink-blossom-pot.jpeg'),
     featured: true,
@@ -153,10 +152,9 @@ export const bouquets: Bouquet[] = [
   {
     id: 'sunflower-daisy-bouquet',
     name: 'Sunflower & Daisy Bouquet',
-    shortDescription:
-      "Bring a smile to someone's day with this beautifully handcrafted Sunflower & Daisy Bouquet.",
+    shortDescription: "Bring a smile to someone's day with this beautifully handcrafted Sunflower & Daisy Bouquet.",
     description:
-      'Bring a smile to someone\'s day with this beautifully handcrafted Sunflower & Daisy Bouquet. Featuring vibrant sunflowers paired with delicate white daisies and wrapped in elegant black premium paper, this bouquet creates the perfect balance of charm and sophistication.',
+      "Bring a smile to someone's day with this beautifully handcrafted Sunflower & Daisy Bouquet. Featuring vibrant sunflowers paired with delicate white daisies and wrapped in elegant black premium paper, this bouquet creates the perfect balance of charm and sophistication.",
     features: ['Handmade with love', 'Perfect for gifting', 'Premium wrapping'],
     price: '₹229',
     image: assetPath('sunflower-daisy-bouquet.jpeg'),
@@ -167,7 +165,7 @@ export const bouquets: Bouquet[] = [
     name: 'Handmade Hanging Sunflower Pot',
     shortDescription: 'Brighten your space with our handmade hanging sunflower pots! Handmade with love, crafted to make every corner bloom.',
     description:
-      'Bring warmth and charm to your space with this handcrafted hanging sunflower pot. Carefully made with soft pipe cleaners, it\'s perfect for home décor, gifting, workspaces, or adding a cheerful touch to any corner.',
+      "Bring warmth and charm to your space with this handcrafted hanging sunflower pot. Carefully made with soft pipe cleaners, it's perfect for home decor, gifting, workspaces, or adding a cheerful touch to any corner.",
     features: [
       '100% Handmade',
       'Premium pipe cleaner flowers',
